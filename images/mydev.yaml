@@ -1,6 +1,10 @@
 name: tpl-mydev
 description: Host-specific sharing layer
 parent: tpl-java
+agent_note: |
+  Unless instructed otherwise, in all repositories that you work on, create a branch
+  that is named the same as the ISX container and work in that branch. Do commit
+  after each reasonably sized chunk of work. Before starting work, pull latest changes from upstream.
 tools:
   - claude
 packages:

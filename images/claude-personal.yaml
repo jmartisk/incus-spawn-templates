@@ -1,0 +1,13 @@
+name: tpl-claude-personal
+description: Claude, personal subscription
+accounts:
+  claude: personal
+parent: tpl-mydev
+tools:
+  - podman
+  - graalvm
+  - mvnd
+  - claude: {model: claude-opus-5-5}
+default-action: claude
+packages:
+ - unzip
