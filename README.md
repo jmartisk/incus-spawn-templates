@@ -69,6 +69,7 @@ OpenSSL 3.5+ strict verification.
 | `mx` | GraalVM's `mx` build tool (cloned to `/opt/mx`, `mx` on PATH) |
 | `labsjdk` | JVMCI-enabled labsjdk fetched by `mx` into `/opt/jdks` and set as `JAVA_HOME` (param: `jdk_id`) |
 | `jtreg` | JTReg test harness (installed to `/opt`, `jtreg` on PATH) |
+| `jbang` | JBang 0.143.0 — run Java single-file source files without a project (installed to `/opt`, symlinked to PATH) |
 | `pinchtab` | [PinchTab](https://github.com/pinchtab/pinchtab) browser control for agents — headless Chromium, the `pinchtab` skill (params: `allowed_domains`, `mcp`) |
 
 ### Giving an agent a browser

@@ -1,0 +1,22 @@
+name: tpl-langchain4j
+description: LangChain4j development box
+parent: tpl-mydev
+tools:
+  - podman
+  - graalvm
+  - mvnd
+  - jbang
+  - claude: {model: claude-sonnet-5}
+default-action: claude
+packages:
+ - unzip
+repos:
+  - url: https://github.com/quarkiverse/quarkus-langchain4j.git
+    # Resolve dependencies breadth-first, in parallel: through the isx proxy every cached
+    # artifact is confirmed with Maven Central, which depth-first resolution pays one
+    # round trip at a time. Measured 16s instead of 44s resolving a Quarkus app on mvnd.
+    # mvnd reads resolver settings only from its command line, not MAVEN_OPTS.
+#    prime: mvnd -b singlethreaded -Dquickly -Daether.dependencyCollector.impl=bf
+    path: ~/quarkus-langchain4j
+  - url: https://github.com/langchain4j/langchain4j.git
+    path: ~/langchain4j
